@@ -1,0 +1,46 @@
+.wheel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.wheel {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 4s cubic-bezier(0.4, 2.2, 0.7, 1); /* (4s) Aumenta o disminuye la duración según tu preferencia */
+}
+
+.wheel.spinning {
+  /* Aumenta o disminuye la duración según tu preferencia */
+  // animation: spin 3s linear infinite;
+  //         Aquí hay algunas funciones de temporización que puedes usar:
+
+  // ease-in: Comienza lentamente y acelera hacia el final.
+  // ease-out: Comienza rápidamente y disminuye hacia el final.
+  // ease-in-out: Comienza lentamente, acelera en el medio y disminuye hacia el final.
+  // linear: Mantiene una velocidad constante durante toda la animación.
+
+  animation: spin 6s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wheel-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
